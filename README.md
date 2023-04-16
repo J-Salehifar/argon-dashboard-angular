@@ -106,13 +106,13 @@ argon-dashboard-angular
 │   │   │       ├── sidebar.component.spec.ts
 │   │   │       └── sidebar.component.ts
 │   │   ├── layouts
-│   │   │   ├── admin-layout
-│   │   │   │   ├── admin-layout.component.html
-│   │   │   │   ├── admin-layout.component.scss
-│   │   │   │   ├── admin-layout.component.spec.ts
-│   │   │   │   ├── admin-layout.component.ts
-│   │   │   │   ├── admin-layout.module.ts
-│   │   │   │   └── admin-layout.routing.ts
+│   │   │   ├── main-layout
+│   │   │   │   ├── main-layout.component.html
+│   │   │   │   ├── main-layout.component.scss
+│   │   │   │   ├── main-layout.component.spec.ts
+│   │   │   │   ├── main-layout.component.ts
+│   │   │   │   ├── main-layout.module.ts
+│   │   │   │   └── main-layout.routing.ts
 │   │   │   └── auth-layout
 │   │   │       ├── auth-layout.component.html
 │   │   │       ├── auth-layout.component.scss

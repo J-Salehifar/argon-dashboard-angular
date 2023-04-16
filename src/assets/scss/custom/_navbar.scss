@@ -1,0 +1,47 @@
+//
+// Navbar
+//
+
+@import "../core/navbars/navbar";
+@import "../core/navbars/navbar-vertical";
+@import "../core/navbars/navbar-search";
+@import "../core/navbars/navbar-dropdown";
+@import "../core/navbars/navbar-collapse";
+
+
+//
+// Navabar collapse
+//
+
+// Collapse
+
+
+
+@include media-breakpoint-down(sm) {
+    .navbar-nav {
+        .nav-link {
+            padding: 0 .625rem;
+            color: theme-color("default") !important;
+        }
+    }
+
+    .navbar-collapse {
+        .collapse-close {
+            text-align: left;
+        }
+    }
+
+}
+@include media-breakpoint-up(md) {
+    .navbar {
+        .dropdown-menu {
+            text-align: right;
+        }
+    }
+}
+
+.title_fa{
+    text-align: center;
+}
+
+
