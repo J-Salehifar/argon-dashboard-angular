@@ -16,13 +16,20 @@ export class interceptor implements HttpInterceptor {
         console.log('///////////////////////////////')
         const token = this.coolieService.get('TW-Cookie');
         console.log("token="+token)
-        const myRequest = req.clone({
-            url : DomainName + req.url,
-            headers : req.headers.append('Authorization','token '+token)
-        });
-        console.log(myRequest)
-        console.log(myRequest)
-        return next.handle(myRequest) 
+        
+        if (token === ''){
+            const myRequest = req.clone({
+                url : DomainName + req.url,
+            });
+            return next.handle(myRequest) 
+        }else{
+            const myRequest = req.clone({
+                url : DomainName + req.url,
+                headers : req.headers.append('Authorization','token '+token)
+            });
+            return next.handle(myRequest) 
+        }
+ 
     }
     
 }
