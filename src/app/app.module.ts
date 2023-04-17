@@ -13,7 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { SiteSettingsComponent } from './pages/site-settings/site-settings.component';
-import { interceptor } from './variables/interceptor';
+import { interceptor } from './services/interceptor';
 
 
 @NgModule({

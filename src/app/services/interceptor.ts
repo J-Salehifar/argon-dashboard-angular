@@ -13,12 +13,15 @@ export class interceptor implements HttpInterceptor {
         private coolieService : CookieService
     ){}
     intercept(req:HttpRequest<any>,next:HttpHandler):Observable<HttpEvent<any>>{
+        console.log('///////////////////////////////')
         const token = this.coolieService.get('TW-Cookie');
         console.log("token="+token)
         const myRequest = req.clone({
             url : DomainName + req.url,
             headers : req.headers.append('Authorization','token '+token)
         });
+        console.log(myRequest)
+        console.log(myRequest)
         return next.handle(myRequest) 
     }
     

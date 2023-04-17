@@ -18,6 +18,7 @@ const routes: Routes =[
       {
         path: '',
         loadChildren: () => import('src/app/layouts/main-layout/main-layout.module').then(m => m.MainLayoutModule)
+        
       }
     ]
   }, {

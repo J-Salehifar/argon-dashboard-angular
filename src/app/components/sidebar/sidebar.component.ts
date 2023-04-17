@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SiteSettingDTO } from 'src/app/pages/site-settings/site-settings-DTO';
-import { SiteSettingsService } from 'src/app/pages/site-settings/site-settings.service';
+import { SiteSettingDTO } from 'src/app/services/site-settings/site-settings-DTO';
+import { SiteSettingsService } from 'src/app/services/site-settings/site-settings.service';
 
 declare interface RouteInfo {
     path: string;
@@ -35,15 +35,15 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.siteSettingService.getCurrentSetting().subscribe(settings=>{
-      console.log('settings = '+ settings)
+      // console.log('settings = '+ settings)
       if (settings === null){
         this.siteSettingService.getSiteSetting().subscribe(res=>{
-          console.log('service = '+ res)
+          // console.log('service = '+ res)
           this.siteSettingService.setCurrentSetting(res)
         })
       }else(
-        this.site_setting = settings[0],
-        console.log(this.site_setting)
+        this.site_setting = settings[0]
+        // console.log(this.site_setting)
       )
     })
 
